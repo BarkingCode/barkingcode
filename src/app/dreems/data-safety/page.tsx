@@ -7,6 +7,10 @@ export default function GooglePlayDataSafetyPage() {
       title="Dreems – Google Play Data Safety"
       subtitle="Summary of how Dreems handles data for Google Play disclosure."
     >
+      <p className="text-sm text-slate-300">
+        <span className="font-medium">Last updated:</span> November 27, 2025
+      </p>
+
       <h2>1. Data Collection Overview</h2>
       <p>Dreems collects limited data necessary for app functionality.</p>
 

@@ -7,6 +7,10 @@ export default function ChildrenSafetyPage() {
       title="Dreems – Children’s Safety Notice"
       subtitle="How Dreems is designed to keep children safe."
     >
+      <p className="text-sm text-slate-300">
+        <span className="font-medium">Last updated:</span> November 27, 2025
+      </p>
+
       <p>
         Dreems is designed for <strong>adults to create stories for children</strong>.
         Children should not use the app independently.

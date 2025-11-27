@@ -8,7 +8,7 @@ export default function TermsPage() {
       subtitle="Please read these terms carefully before using Dreems."
     >
       <p className="text-sm text-slate-300">
-        <span className="font-medium">Last updated:</span> [DATE]
+        <span className="font-medium">Last updated:</span> November 27, 2025
       </p>
 
       <p>
