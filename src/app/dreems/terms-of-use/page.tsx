@@ -4,6 +4,7 @@ import { LegalLayout } from "@/components/LegalLayout";
 export default function TermsPage() {
   return (
     <LegalLayout
+      appName="Dreems"
       title="Dreems – Terms of Use"
       subtitle="Please read these terms carefully before using Dreems."
     >

@@ -4,6 +4,7 @@ import { LegalLayout } from "@/components/LegalLayout";
 export default function AgeSuitabilityPage() {
   return (
     <LegalLayout
+      appName="Dreems"
       title="Age Suitability"
       subtitle="Information about our content and target audience."
     >

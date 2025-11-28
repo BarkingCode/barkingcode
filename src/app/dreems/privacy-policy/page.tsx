@@ -4,6 +4,7 @@ import { LegalLayout } from "@/components/LegalLayout";
 export default function PrivacyPage() {
   return (
     <LegalLayout
+      appName="Dreems"
       title="Dreems – Privacy Policy"
       subtitle="How we collect, use, and protect your data."
     >

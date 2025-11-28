@@ -4,6 +4,7 @@ import { LegalLayout } from "@/components/LegalLayout";
 export default function GooglePlayDataSafetyPage() {
   return (
     <LegalLayout
+      appName="Dreems"
       title="Dreems – Google Play Data Safety"
       subtitle="Summary of how Dreems handles data for Google Play disclosure."
     >

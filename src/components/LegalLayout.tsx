@@ -6,16 +6,17 @@ interface LegalLayoutProps {
   title: string;
   subtitle?: string;
   children: React.ReactNode;
+  appName?: string;
 }
 
-export function LegalLayout({ title, subtitle, children }: LegalLayoutProps) {
+export function LegalLayout({ title, subtitle, children, appName = "Dreems" }: LegalLayoutProps) {
   return (
     <div className="min-h-screen bg-white text-slate-900">
       <div className="mx-auto max-w-3xl px-4 py-10 sm:py-14">
         {/* Header */}
         <header className="mb-8 border-b border-slate-200 pb-6">
           <div className="inline-flex items-center rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-700 ring-1 ring-slate-200">
-            Dreems • Legal
+            {appName} • Legal
           </div>
           <h1 className="mt-4 text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl font-heading">
             {title}
@@ -34,7 +35,7 @@ export function LegalLayout({ title, subtitle, children }: LegalLayoutProps) {
 
         {/* Footer */}
         <footer className="mt-12 border-t border-slate-200 pt-4 text-xs text-slate-500">
-          <p>Dreems is a product by Barking Code.</p>
+          <p>{appName} is a product by Barking Code.</p>
           <p className="mt-1">
             For questions, contact{" "}
             <a
