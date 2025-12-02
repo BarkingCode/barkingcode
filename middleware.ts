@@ -8,9 +8,9 @@ export function middleware(request: NextRequest) {
   // Handle xsudoku subdomain
   // Matches: xsudoku.barkingcode.com, xsudoku.localhost:3000, etc.
   if (hostname.startsWith('xsudoku.')) {
-    // Rewrite the URL to /sudokux directory
-    // We keep the pathname, so xsudoku.com/foo -> /sudokux/foo
-    url.pathname = `/sudokux${url.pathname}`
+    // Rewrite the URL to /xsudoku directory
+    // We keep the pathname, so xsudoku.com/foo -> /xsudoku/foo
+    url.pathname = `/xsudoku${url.pathname}`
     return NextResponse.rewrite(url)
   }
 
