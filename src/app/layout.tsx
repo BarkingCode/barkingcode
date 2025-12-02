@@ -1,19 +1,10 @@
 import type { Metadata } from 'next'
-import localFont from 'next/font/local'
 import './globals.css'
-import { Lexend, Montserrat } from 'next/font/google'
-import { Header } from '@/components/header'
-import { Footer } from '@/components/footer'
+import { Lexend, Montserrat, Inconsolata } from 'next/font/google'
 
-const geistSans = localFont({
-  src: './fonts/GeistVF.woff',
-  variable: '--font-geist-sans',
-  weight: '100 900',
-})
-const geistMono = localFont({
-  src: './fonts/GeistMonoVF.woff',
-  variable: '--font-geist-mono',
-  weight: '100 900',
+const inconsolata = Inconsolata({
+  subsets: ['latin'],
+  variable: '--font-inconsolata',
 })
 
 const lexend = Lexend({ subsets: ['latin'], variable: '--font-lexend' })
@@ -26,7 +17,7 @@ export const metadata: Metadata = {
   title:
     'Barking Code | Expert Mobile & Web Design Agency | Fixed-Price Subscriptions',
   description:
-    'Elevate your brand with Barking Code’s expert mobile & web design, UI/UX, and no-code development. Enjoy fixed-price monthly subscriptions, unlimited revisions, and fast delivery. Book a call today!',
+    "Elevate your brand with Barking Code's expert mobile & web design, UI/UX, and no-code development. Enjoy fixed-price monthly subscriptions, unlimited revisions, and fast delivery. Book a call today!",
   icons: {
     icon: [
       { url: '/assets/favicon/favicon.ico' },
@@ -55,14 +46,8 @@ export default function RootLayout({
       <head>
         <script async src="https://js.stripe.com/v3/buy-button.js"></script>
       </head>
-      <body
-        className={`pt-24 ${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <div className="min-h-screen bg-white ">
-          <Header />
-          <main>{children}</main>
-          <Footer />
-        </div>
+      <body className={`${inconsolata.variable} antialiased`}>
+        {children}
       </body>
     </html>
   )

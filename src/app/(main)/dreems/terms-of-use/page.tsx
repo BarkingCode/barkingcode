@@ -25,7 +25,7 @@ export default function TermsPage() {
 
       <h2>2. Purpose of the App</h2>
       <p>
-        Dreems lets adults generate AI-powered children’s stories by providing
+        Dreems lets adults generate AI-powered children's stories by providing
         prompts, preferences, and optional child details like name or age
         group. The app is for entertainment and educational storytelling
         purposes only.
@@ -68,7 +68,7 @@ export default function TermsPage() {
       </p>
       <p>
         Pricing, taxes, and currency are determined by the platform. Refunds are
-        handled according to Apple’s and Google’s respective policies and
+        handled according to Apple's and Google's respective policies and
         applicable local law.
       </p>
 
@@ -94,8 +94,8 @@ export default function TermsPage() {
 
       <h2>8. Disclaimer &amp; Limitation of Liability</h2>
       <p>
-        Dreems is provided on an <strong>“as is”</strong> and{" "}
-        <strong>“as available”</strong> basis, without any warranties of any
+        Dreems is provided on an <strong>"as is"</strong> and{" "}
+        <strong>"as available"</strong> basis, without any warranties of any
         kind, whether express or implied.
       </p>
       <p>We are not responsible for:</p>
@@ -113,7 +113,7 @@ export default function TermsPage() {
       <h2>9. Updates to These Terms</h2>
       <p>
         We may update these Terms of Use from time to time. When we do, we will
-        update the “Last updated” date above. Your continued use of the app
+        update the "Last updated" date above. Your continued use of the app
         after changes are made means you accept the updated terms.
       </p>
 

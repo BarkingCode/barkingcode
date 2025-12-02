@@ -5,7 +5,7 @@ export default function ChildrenSafetyPage() {
   return (
     <LegalLayout
       appName="Dreems"
-      title="Dreems – Children’s Safety Notice"
+      title="Dreems – Children's Safety Notice"
       subtitle="How Dreems is designed to keep children safe."
     >
       <p className="text-sm text-slate-300">

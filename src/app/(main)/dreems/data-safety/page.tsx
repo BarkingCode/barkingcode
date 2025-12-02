@@ -25,7 +25,7 @@ export default function GooglePlayDataSafetyPage() {
 
       <h3>Personal Info (Optional)</h3>
       <ul>
-        <li>Child’s name</li>
+        <li>Child's name</li>
         <li>Age group</li>
         <li>Story preferences and themes</li>
       </ul>
@@ -50,7 +50,7 @@ export default function GooglePlayDataSafetyPage() {
       <h3>Purchase Information</h3>
       <p>
         Purchases (such as story packs or tokens) are processed via Apple and
-        Google’s payment systems. Dreems itself does not store full payment
+        Google's payment systems. Dreems itself does not store full payment
         details.
       </p>
 

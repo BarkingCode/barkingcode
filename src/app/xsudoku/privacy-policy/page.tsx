@@ -13,7 +13,7 @@ export default function PrivacyPage() {
       </p>
 
       <p>
-        Sudoku X (“the App”, “we”, “our”, “us”) is a mobile game designed to provide a premium Sudoku experience. We respect your privacy and are committed to protecting your personal information.
+        Sudoku X ("the App", "we", "our", "us") is a mobile game designed to provide a premium Sudoku experience. We respect your privacy and are committed to protecting your personal information.
       </p>
 
       <p>

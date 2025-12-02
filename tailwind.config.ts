@@ -15,7 +15,6 @@ const config: Config = {
       fontFamily: {
         lexend: ['var(--font-lexend)'],
         montserrat: ['var(--font-montserrat)'],
-        'space-mono': ['var(--font-space-mono)', 'monospace'],
       },
       colors: {
         background: 'hsl(var(--background))',

@@ -23,13 +23,18 @@ export default function XSudokuLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={spaceMono.variable}>
-      <body
-        className={`${spaceMono.className} antialiased`}
-        style={{ paddingTop: 0 }}
-      >
-        {children}
-      </body>
-    </html>
+    <div className={`${spaceMono.variable} ${spaceMono.className} antialiased [&_h1]:font-[inherit] [&_h2]:font-[inherit] [&_h3]:font-[inherit] [&_h4]:font-[inherit] [&_h5]:font-[inherit] [&_h6]:font-[inherit]`}>
+      <style>{`
+        .${spaceMono.className} h1,
+        .${spaceMono.className} h2,
+        .${spaceMono.className} h3,
+        .${spaceMono.className} h4,
+        .${spaceMono.className} h5,
+        .${spaceMono.className} h6 {
+          font-family: inherit !important;
+        }
+      `}</style>
+      {children}
+    </div>
   )
 }

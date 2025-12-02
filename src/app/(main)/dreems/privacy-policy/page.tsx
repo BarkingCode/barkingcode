@@ -13,9 +13,9 @@ export default function PrivacyPage() {
       </p>
 
       <p>
-        Dreems (“the App”, “we”, “our”, “us”) is an AI-powered mobile
+        Dreems ("the App", "we", "our", "us") is an AI-powered mobile
         application that allows parents and caregivers to create personalized
-        children’s stories. We respect your privacy and are committed to
+        children's stories. We respect your privacy and are committed to
         protecting your personal information.
       </p>
 
@@ -29,8 +29,8 @@ export default function PrivacyPage() {
       <h3>1.1 Information You Provide</h3>
       <p>When using Dreems, you may provide optional information such as:</p>
       <ul>
-        <li>Child’s name</li>
-        <li>Child’s age group</li>
+        <li>Child's name</li>
+        <li>Child's age group</li>
         <li>Story preferences, themes, or interests</li>
         <li>Language preferences</li>
       </ul>
@@ -71,7 +71,7 @@ export default function PrivacyPage() {
       <h2>2. How We Use Your Information</h2>
       <p>We use your information to:</p>
       <ul>
-        <li>Generate and personalize children’s stories</li>
+        <li>Generate and personalize children's stories</li>
         <li>Improve app stability, quality, and performance</li>
         <li>Provide customer support and respond to requests</li>
         <li>Process in-app purchases and maintain purchase history</li>
@@ -99,7 +99,7 @@ export default function PrivacyPage() {
         <li>Limited data retention based on purpose</li>
       </ul>
       <p>
-        Story inputs (such as a child’s name or age group) are not stored
+        Story inputs (such as a child's name or age group) are not stored
         permanently unless you save the story in your library.
       </p>
 
@@ -110,11 +110,11 @@ export default function PrivacyPage() {
         only for the purpose of generating that content.
       </p>
       <p>
-        According to OpenAI’s API data usage policies, your data is not used to
-        train OpenAI’s models.
+        According to OpenAI's API data usage policies, your data is not used to
+        train OpenAI's models.
       </p>
 
-      <h2>5. Children’s Privacy</h2>
+      <h2>5. Children's Privacy</h2>
       <p>
         Dreems is designed to be used by adults (parents and caregivers) to
         create stories for children. We do not knowingly collect personal
@@ -204,7 +204,7 @@ export default function PrivacyPage() {
       <p>
         We may update this Privacy Policy from time to time. If we make
         significant changes, we will notify you inside the app or update the
-        “Last updated” date at the top of this page. Continued use of Dreems
+        "Last updated" date at the top of this page. Continued use of Dreems
         after changes are made means you accept the updated policy.
       </p>
     </LegalLayout>
