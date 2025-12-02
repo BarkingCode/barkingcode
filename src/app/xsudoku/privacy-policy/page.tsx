@@ -4,8 +4,8 @@ import { LegalLayout } from "@/components/LegalLayout";
 export default function PrivacyPage() {
   return (
     <LegalLayout
-      appName="Sudoku X"
-      title="Sudoku X – Privacy Policy"
+      appName="X-Sudoku"
+      title="X-Sudoku – Privacy Policy"
       subtitle="How we collect, use, and protect your data."
     >
       <p className="text-sm text-slate-500">
@@ -13,7 +13,7 @@ export default function PrivacyPage() {
       </p>
 
       <p>
-        Sudoku X ("the App", "we", "our", "us") is a mobile game designed to provide a premium Sudoku experience. We respect your privacy and are committed to protecting your personal information.
+        X-Sudoku ("the App", "we", "our", "us") is a mobile game designed to provide a premium Sudoku experience. We respect your privacy and are committed to protecting your personal information.
       </p>
 
       <p>
@@ -22,7 +22,7 @@ export default function PrivacyPage() {
 
       <h2>1. No Account Required</h2>
       <p>
-        You do <strong>not</strong> need to create an account to play Sudoku X. We do not ask for your email address, phone number, or password.
+        You do <strong>not</strong> need to create an account to play X-Sudoku. We do not ask for your email address, phone number, or password.
       </p>
 
       <h2>2. Information We Collect</h2>

@@ -3,50 +3,14 @@ import Image from 'next/image'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Sudoku X - Sudoku, Perfected',
+  title: 'X-Sudoku - Sudoku, Perfected',
   description:
     'The Sudoku you deserve. Daily challenges, journey mode, global leaderboards, and six difficulty levels. Pure Sudoku. Zero clutter.',
 }
 
 export default function XSudokuLandingPage() {
   return (
-    <div className="min-h-screen bg-white text-nebg-neutral-950 font-space-mono selection:bg-neutral-950 selection:text-white">
-      {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm border-b border-nebg-neutral-950/10">
-        <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-          <Link href="/xsudoku" className="flex items-center gap-3">
-            <Image
-              src="/assets/xsudoku/logo-bg.svg"
-              alt="Sudoku X"
-              width={40}
-              height={40}
-              className="rounded-lg"
-            />
-            <span className="text-lg font-bold tracking-tight">SUDOKU X</span>
-          </Link>
-          <div className="hidden md:flex items-center gap-8 text-sm">
-            <Link
-              href="#features"
-              className="hover:underline underline-offset-4"
-            >
-              Features
-            </Link>
-            <Link
-              href="#how-it-works"
-              className="hover:underline underline-offset-4"
-            >
-              How It Works
-            </Link>
-            <Link
-              href="#download"
-              className="bg-neutral-950 text-white px-5 py-2.5 rounded-full hover:bg-neutral-300 transition-colors"
-            >
-              Download
-            </Link>
-          </div>
-        </div>
-      </nav>
-
+    <div className="min-h-screen bg-white text-neutral-950 font-space-mono selection:bg-neutral-950 selection:text-white">
       {/* Hero Section */}
       <section className="min-h-screen flex flex-col items-center justify-center px-6 pt-40">
         <div className="text-center max-w-4xl mx-auto">
@@ -60,7 +24,7 @@ export default function XSudokuLandingPage() {
           <div className="relative w-64 h-64 md:w-80 md:h-80 mx-auto mb-12">
             <Image
               src="/assets/xsudoku/logo-bg.svg"
-              alt="Sudoku X Logo"
+              alt="X-Sudoku Logo"
               fill
               className=""
               priority
@@ -391,11 +355,11 @@ export default function XSudokuLandingPage() {
             <div className="flex items-center gap-3">
               <Image
                 src="/assets/xsudoku/logo-white.svg"
-                alt="Sudoku X"
+                alt="X-Sudoku"
                 width={32}
                 height={32}
               />
-              <span className="font-bold">SUDOKU X</span>
+              <span className="font-bold">X-Sudoku</span>
               <span className="text-neutral-600 ml-2">
                 © {new Date().getFullYear()} Barking Code
               </span>

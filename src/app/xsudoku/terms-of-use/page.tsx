@@ -4,26 +4,26 @@ import { LegalLayout } from "@/components/LegalLayout";
 export default function TermsPage() {
   return (
     <LegalLayout
-      appName="Sudoku X"
-      title="Sudoku X – Terms of Use"
-      subtitle="Please read these terms carefully before playing Sudoku X."
+      appName="X-Sudoku"
+      title="X-Sudoku – Terms of Use"
+      subtitle="Please read these terms carefully before playing X-Sudoku."
     >
       <p className="text-sm text-slate-500">
         <span className="font-medium">Last updated:</span> November 28, 2025
       </p>
 
       <p>
-        Welcome to Sudoku X! By downloading or using the app, you agree to the following terms.
+        Welcome to X-Sudoku! By downloading or using the app, you agree to the following terms.
       </p>
 
       <h2>1. Use of the App</h2>
       <p>
-        Sudoku X is provided for personal, non-commercial entertainment purposes. You agree not to misuse the app, attempt to cheat or manipulate leaderboards, or reverse-engineer the software.
+        X-Sudoku is provided for personal, non-commercial entertainment purposes. You agree not to misuse the app, attempt to cheat or manipulate leaderboards, or reverse-engineer the software.
       </p>
 
       <h2>2. Subscriptions & Purchases</h2>
       <p>
-        Sudoku X offers an optional "Ad-Free" subscription.
+        X-Sudoku offers an optional "Ad-Free" subscription.
       </p>
       <ul>
         <li><strong>Price:</strong> $4.99 USD per month (or local equivalent).</li>
@@ -45,7 +45,7 @@ export default function TermsPage() {
 
       <h2>5. Intellectual Property</h2>
       <p>
-        All rights, title, and interest in Sudoku X, including its code, design, and content, are owned by Barking Code.
+        All rights, title, and interest in X-Sudoku, including its code, design, and content, are owned by Barking Code.
       </p>
 
       <h2>6. Disclaimer of Warranties</h2>

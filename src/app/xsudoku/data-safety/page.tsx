@@ -4,12 +4,12 @@ import { LegalLayout } from "@/components/LegalLayout";
 export default function DataSafetyPage() {
   return (
     <LegalLayout
-      appName="Sudoku X"
-      title="Sudoku X – Data Safety"
-      subtitle="Summary of how Sudoku X handles data for app store disclosures."
+      appName="X-Sudoku"
+      title="X-Sudoku – Data Safety"
+      subtitle="Summary of how X-Sudoku handles data for app store disclosures."
     >
       <h2>1. Data Collection Overview</h2>
-      <p>Sudoku X collects limited data to support game functionality, analytics, and advertising.</p>
+      <p>X-Sudoku collects limited data to support game functionality, analytics, and advertising.</p>
 
       <ul>
         <li><strong>User ID:</strong> Anonymous internal identifier.</li>

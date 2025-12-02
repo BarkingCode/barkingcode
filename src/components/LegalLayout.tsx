@@ -12,7 +12,7 @@ interface LegalLayoutProps {
 export function LegalLayout({ title, subtitle, children, appName = "Dreems" }: LegalLayoutProps) {
   return (
     <div className="min-h-screen bg-white text-slate-900">
-      <div className="mx-auto max-w-3xl px-4 py-10 sm:py-14">
+      <div className="mx-auto max-w-3xl px-4 pt-24 pb-10 sm:pt-28 sm:pb-14">
         {/* Header */}
         <header className="mb-8 border-b border-slate-200 pb-6">
           <div className="inline-flex items-center rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-700 ring-1 ring-slate-200">
@@ -29,7 +29,7 @@ export function LegalLayout({ title, subtitle, children, appName = "Dreems" }: L
         </header>
 
         {/* Content */}
-        <main className="prose prose-slate max-w-none font-body prose-headings:mt-12 prose-h2:mb-6 prose-p:text-slate-600 prose-li:text-slate-600">
+        <main className="prose prose-slate max-w-none font-body prose-headings:mt-12 prose-h2:mb-6 prose-p:text-slate-600 prose-li:text-slate-600  flex flex-col gap-4">
           {children}
         </main>
 
