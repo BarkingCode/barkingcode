@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react'
 import {
   Accordion,
@@ -6,80 +8,105 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion'
 import { Button } from '@/components/ui/button'
+import { motion } from 'framer-motion'
+import Link from 'next/link'
 
 export const FAQ = () => {
   const faq = [
     {
-      question: 'How Does Your Subscription Model Work?',
+      question: 'What exactly is Barking Studio?',
       answer:
-        "Think of our subscription model as your favorite Netflix plan, but instead of movies, you get top-notch design and development services. Choose the package that fits your needs, submit your requests through our sleek Typeform, and let our creative wizards handle the rest. Whether you're looking to spruce up your mobile app or overhaul your website, we deliver quality without the long-term commitment. And yes, you can pause or cancel anytime—no awkward goodbyes required!",
+        "We're an AI development studio and product lab based in Amsterdam. We operate as both a consultancy -- helping companies build and integrate AI solutions -- and as a product company, building our own apps, agents, and tools. Think of us as half agency, half R&D lab.",
     },
     {
-      question: 'What Services Are Included in the Design Package?',
+      question: 'What kind of AI agents do you build?',
       answer:
-        "Our Design Package is like a Swiss Army knife for your digital needs. From crafting stunning mobile and web product designs to perfecting your UI/UX, we've got you covered. Need no-code development to bring your ideas to life without writing a single line of code? Done. Plus, enjoy perks like production-ready designs, speedy revisions, strategic kick-off calls, and unlimited requests and revisions. It's all the design goodness you need, wrapped up with a bow (and a dash of creativity)!",
+        "We build voice agents that handle real phone conversations, welcoming agents that greet and qualify visitors, and workflow automation agents that handle repetitive tasks. Each agent is custom-built for the specific use case -- we don't do cookie-cutter chatbots.",
     },
     {
-      question: 'What Makes Your Full-Service Package So Special?',
+      question: 'Do you only work on AI projects?',
       answer:
-        "Our Full-Service Package is the superhero cape your business didn't know it needed. It includes everything from our Design Package and then some—think Webflow and Framer development, seamless team integration, daily project updates, and end-to-end support from the first sketch to the final handoff. Plus, you get priority support, one-on-one async communication, and all the branding and React/React Native development magic. It's like having a design and development dream team at your beck and call!",
+        "No. While AI is our core focus, we also build mobile apps, web platforms, and full-stack products. Many of our projects combine traditional product development with AI capabilities. We've shipped everything from fintech platforms to puzzle games.",
     },
     {
-      question: 'Can I Upgrade or Downgrade My Subscription Plan?',
+      question: 'How do you work with clients?',
       answer:
-        "Absolutely! Our subscription plans are as flexible as a yoga instructor. Whether you need to scale up your services during a busy season or scale down when things are a bit quieter, you can upgrade or downgrade your plan anytime. No rigid contracts or awkward negotiations—just straightforward adjustments to fit your evolving needs. Flexibility is our middle name (not literally, but you get the idea).",
+        "We start with a discovery call to understand your goals, then scope the work together. Depending on the project, we work in focused sprints or on a retainer basis. Communication happens via Slack, and we provide regular updates through our client portal. We're hands-on and collaborative.",
     },
     {
-      question:
-        'How Quickly Can I Expect to Receive My Designs or Developments?',
+      question: "What's your tech stack?",
       answer:
-        "We're all about speed without sacrificing quality. For our Design Package, you can expect your designs within an average of 48 hours, with revisions taking just 1-2 days. Need it faster? Our Full-Service Package comes with priority delivery to keep your projects moving at lightning speed. Whether it's a last-minute tweak or a major overhaul, we hustle to get you what you need, when you need it—no cape required.",
+        'We primarily work with React, React Native, Next.js, TypeScript, and Python. For AI, we work across the major LLM providers, build custom RAG pipelines, fine-tune models when needed, and deploy agents on various voice and messaging platforms.',
     },
     {
-      question: "What Happens If I'm Not Satisfied with the Deliverables?",
+      question: 'Why do you build your own products too?',
       answer:
-        "Your satisfaction is our top priority, and we're not happy until you are. If something doesn't quite hit the mark, just let us know! With unlimited revisions, we'll tweak, refine, and polish until it's perfect. Think of us as your design BFFs—always here to help you shine. And if you ever need to take a step back, remember you can pause or cancel anytime. No hard feelings, promise!",
+        "Building our own products keeps us sharp. It means we're constantly testing new technologies, frameworks, and AI models before recommending them to clients. Our consulting is informed by real shipping experience, not just theory.",
     },
     {
-      question:
-        'How Do You Ensure the Quality of Your Designs and Developments?',
+      question: 'Can you help us figure out where AI fits in our business?',
       answer:
-        "Quality is our secret sauce, and we don't skimp on it. Our team of seasoned designers and developers are passionate about what they do, bringing expertise and creativity to every project. We follow industry best practices, conduct thorough testing, and keep the lines of communication open to ensure everything meets your high standards. It's like having a quality control team that actually enjoys their job!",
+        "That's one of the things we do best. We offer AI consulting and strategy sessions where we audit your current workflows, identify high-impact automation opportunities, and build a practical roadmap. No hype, just realistic assessments of what AI can and can't do for you today.",
     },
     {
-      question:
-        'What Tools and Platforms Do You Use for Collaboration and Project Management?',
+      question: 'How do I get started?',
       answer:
-        "We believe in using the best tools to keep things smooth and stylish. From Typeform for easy request submissions and Notion for organized project management to Slack for real-time chats, we've got all the bases covered. Plus, our designs live in Figma, ensuring that developers get clean, dev-ready files and interactive prototypes. It's a tech-savvy ecosystem designed to make collaboration as easy as pie—yum!",
-    },
-    {
-      question: 'Do You Offer Custom Solutions or Only Fixed Packages?',
-      answer:
-        "We offer both! Our fixed subscription packages are perfect for businesses looking for reliable, ongoing design and development support. But if you have unique needs that don't quite fit into a standard package, we're more than happy to tailor a custom solution just for you. Whether you need a little extra branding magic or a whole lot of React development, we can create a package that's as unique as your business. Let's get creative together!",
-    },
-    {
-      question: 'How Do I Get Started with Barking Code?',
-      answer:
-        "Getting started is easier than teaching your dog a new trick (and probably more fun too). Simply choose the package that best fits your needs, hit the Book a Call button to schedule a strategic kick-off call, and fill out our Typeform to submit your first request. From there, our team jumps into action, delivering top-quality designs and developments while keeping you in the loop every step of the way. Ready to unleash your project? We thought so!",
+        "Reach out through our contact form or book a call directly. We'll have an initial conversation to understand what you're looking for, and if there's a fit, we'll put together a proposal. No commitment needed to start talking.",
     },
   ]
+
   return (
-    <section className="container mx-auto px-4 py-20 grid md:grid-cols-3 gap-8">
-      <div className=" max-w-md gap-4 flex flex-col justify-start items-start">
-        <h2 className="text-3xl font-bold  text-center">FAQ</h2>
-        <p className="text-secondary font-semibold max-w-sm">
-          Contact us if you have more questions
-        </p>
-        <Button>Reach out</Button>
+    <section className="container mx-auto px-4 py-24 grid md:grid-cols-3 gap-12">
+      <div className="max-w-md gap-4 flex flex-col justify-start items-start">
+        <motion.p
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-sm font-medium text-purple-400 tracking-wide uppercase"
+        >
+          Questions
+        </motion.p>
+        <motion.h2
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.1 }}
+          className="text-3xl font-bold"
+        >
+          Frequently Asked
+        </motion.h2>
+        <motion.p
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.2 }}
+          className="text-muted-foreground"
+        >
+          Can&apos;t find what you&apos;re looking for? Reach out directly.
+        </motion.p>
+        <Link href="/#contact">
+          <Button
+            variant="outline"
+            className="border-white/20 hover:bg-white/5"
+          >
+            Contact Us
+          </Button>
+        </Link>
       </div>
-      <div className="md:col-span-2 space-y-8 ">
+      <div className="md:col-span-2 space-y-4">
         <Accordion type="single" collapsible className="w-full">
-          {faq.map((faq, index) => (
-            <AccordionItem key={index} value={`item-${index}`}>
-              <AccordionTrigger className="text-left gap-2">
-                {faq.question}
+          {faq.map((item, index) => (
+            <AccordionItem
+              key={index}
+              value={`item-${index}`}
+              className="border-white/10"
+            >
+              <AccordionTrigger className="text-left gap-2 text-foreground hover:text-foreground/80">
+                {item.question}
               </AccordionTrigger>
-              <AccordionContent>{faq.answer}</AccordionContent>
+              <AccordionContent className="text-muted-foreground">
+                {item.answer}
+              </AccordionContent>
             </AccordionItem>
           ))}
         </Accordion>

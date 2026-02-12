@@ -15,9 +15,9 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   title:
-    'Barking Code | Expert Mobile & Web Design Agency | Fixed-Price Subscriptions',
+    'Barking Studio | AI Development Studio & Product Lab',
   description:
-    "Elevate your brand with Barking Code's expert mobile & web design, UI/UX, and no-code development. Enjoy fixed-price monthly subscriptions, unlimited revisions, and fast delivery. Book a call today!",
+    'Barking Studio builds intelligent products and helps companies navigate the AI landscape. From custom AI agents to mobile apps, we combine deep R&D with hands-on consulting to ship what matters.',
   icons: {
     icon: [
       { url: '/assets/favicon/favicon.ico' },
@@ -42,7 +42,10 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${lexend.variable} ${montserrat.variable}`}>
+    <html
+      lang="en"
+      className={`dark ${lexend.variable} ${montserrat.variable}`}
+    >
       <head>
         <script async src="https://js.stripe.com/v3/buy-button.js"></script>
       </head>

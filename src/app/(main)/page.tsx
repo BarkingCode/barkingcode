@@ -11,9 +11,8 @@ export default function LandingPage() {
   return (
     <>
       <Hero />
-      <HowItWorks />
       <Client />
-      {/* <Testimonials /> */}
+      <HowItWorks />
       <Services />
       <Pricing />
       <CTAcard />
