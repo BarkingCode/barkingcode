@@ -1,6 +1,5 @@
 import { CTAcard } from './sections/CTAcard'
 import { FAQ } from './sections/FAQ'
-import { Form } from './sections/form'
 import { Hero } from './sections/hero'
 import { HowItWorks } from './sections/howitworks'
 import { Pricing } from './sections/pricing'
@@ -17,7 +16,6 @@ export default function LandingPage() {
       <Pricing />
       <CTAcard />
       <FAQ />
-      <Form />
     </>
   )
 }

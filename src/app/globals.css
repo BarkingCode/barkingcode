@@ -46,7 +46,7 @@
     --popover-foreground: 0 0% 95%;
     --primary: 0 0% 98%;
     --primary-foreground: 240 6% 10%;
-    --secondary: 260 60% 55%;
+    --secondary: 30 85% 55%;
     --secondary-foreground: 0 0% 98%;
     --body: 0 0% 65%;
     --muted: 240 4% 16%;
@@ -63,11 +63,11 @@
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
-    --color-1: 260 100% 65%;
-    --color-2: 220 100% 65%;
-    --color-3: 180 100% 55%;
-    --color-4: 300 100% 65%;
-    --color-5: 340 100% 65%;
+    --color-1: 25 100% 60%;
+    --color-2: 30 100% 55%;
+    --color-3: 35 90% 50%;
+    --color-4: 15 100% 60%;
+    --color-5: 40 90% 55%;
   }
 }
 
@@ -132,11 +132,11 @@ section {
 .gradient-text {
   background: linear-gradient(
     135deg,
-    hsl(260, 100%, 70%) 0%,
-    hsl(220, 100%, 65%) 25%,
-    hsl(180, 100%, 55%) 50%,
-    hsl(260, 100%, 70%) 75%,
-    hsl(220, 100%, 65%) 100%
+    hsl(30, 100%, 60%) 0%,
+    hsl(25, 100%, 55%) 25%,
+    hsl(35, 90%, 50%) 50%,
+    hsl(30, 100%, 60%) 75%,
+    hsl(20, 100%, 55%) 100%
   );
   background-size: 200% 200%;
   -webkit-background-clip: text;
@@ -148,9 +148,9 @@ section {
 .gradient-text-warm {
   background: linear-gradient(
     135deg,
-    hsl(30, 85%, 55%) 0%,
-    hsl(340, 80%, 60%) 50%,
-    hsl(260, 80%, 65%) 100%
+    hsl(30, 90%, 55%) 0%,
+    hsl(25, 95%, 50%) 50%,
+    hsl(35, 85%, 55%) 100%
   );
   background-size: 200% 200%;
   -webkit-background-clip: text;
@@ -186,8 +186,8 @@ section {
   height: 120%;
   background: radial-gradient(
     ellipse at center,
-    hsla(260, 100%, 65%, 0.15) 0%,
-    hsla(220, 100%, 65%, 0.08) 35%,
+    hsla(30, 100%, 55%, 0.15) 0%,
+    hsla(25, 100%, 50%, 0.08) 35%,
     transparent 70%
   );
   filter: blur(60px);
@@ -202,8 +202,41 @@ section {
 
 .card-glow:hover {
   box-shadow:
-    0 0 30px hsla(260, 100%, 65%, 0.1),
-    0 0 60px hsla(220, 100%, 65%, 0.05);
+    0 0 30px hsla(30, 100%, 55%, 0.1),
+    0 0 60px hsla(25, 100%, 50%, 0.05);
+}
+
+/* Spotlight card effect */
+.spotlight-card {
+  position: relative;
+  border-radius: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.02);
+  padding: 1.5rem;
+  overflow: hidden;
+  --mouse-x: 50%;
+  --mouse-y: 50%;
+  --spotlight-color: rgba(249, 115, 22, 0.15);
+}
+
+.spotlight-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    600px circle at var(--mouse-x) var(--mouse-y),
+    var(--spotlight-color),
+    transparent 40%
+  );
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+
+.spotlight-card:hover::before {
+  opacity: 1;
 }
 
 /* Dot grid background pattern */

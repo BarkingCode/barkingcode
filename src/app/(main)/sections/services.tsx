@@ -49,7 +49,7 @@ export const Services = () => {
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-sm font-medium text-purple-400 mb-3 tracking-wide uppercase"
+            className="text-sm font-medium text-orange-400 mb-3 tracking-wide uppercase"
           >
             Our Expertise
           </motion.p>

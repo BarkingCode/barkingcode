@@ -9,7 +9,7 @@ import {
 } from '@/components/ui/accordion'
 import { Button } from '@/components/ui/button'
 import { motion } from 'framer-motion'
-import Link from 'next/link'
+
 
 export const FAQ = () => {
   const faq = [
@@ -62,7 +62,7 @@ export const FAQ = () => {
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-sm font-medium text-purple-400 tracking-wide uppercase"
+          className="text-sm font-medium text-orange-400 tracking-wide uppercase"
         >
           Questions
         </motion.p>
@@ -84,14 +84,13 @@ export const FAQ = () => {
         >
           Can&apos;t find what you&apos;re looking for? Reach out directly.
         </motion.p>
-        <Link href="/#contact">
-          <Button
-            variant="outline"
-            className="border-white/20 hover:bg-white/5"
-          >
-            Contact Us
-          </Button>
-        </Link>
+        <Button
+          variant="outline"
+          className="border-white/20 hover:bg-white/5"
+          onClick={() => window.dispatchEvent(new CustomEvent('open-voice-widget'))}
+        >
+          Contact Us
+        </Button>
       </div>
       <div className="md:col-span-2 space-y-4">
         <Accordion type="single" collapsible className="w-full">

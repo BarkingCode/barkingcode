@@ -5,18 +5,38 @@ import Link from 'next/link'
 import React from 'react'
 import { motion } from 'framer-motion'
 import { ArrowRight, Sparkles } from 'lucide-react'
+import dynamic from 'next/dynamic'
+
+const LiquidEther = dynamic(() => import('@/components/ui/liquid-ether'), {
+  ssr: false,
+})
 
 export const Hero = () => {
   return (
-    <section className="relative container mx-auto px-4 pt-16 pb-24 md:pt-24 md:pb-32 text-center overflow-hidden">
-      {/* Ambient background glow */}
-      <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-gradient-to-b from-purple-500/10 via-blue-500/5 to-transparent rounded-full blur-3xl" />
-        <div className="absolute top-1/3 left-1/4 w-[400px] h-[400px] bg-gradient-to-br from-cyan-500/8 to-transparent rounded-full blur-3xl" />
-        <div className="absolute top-1/3 right-1/4 w-[400px] h-[400px] bg-gradient-to-bl from-violet-500/8 to-transparent rounded-full blur-3xl" />
+    <section className="relative   text-center w-[100vw]">
+      {/* Liquid Ether background */}
+      <div className="absolute inset-0 pointer-events-none top-0 left-0 " aria-hidden="true">
+        <LiquidEther
+          colors={['#bb7a00', '#a34400', '#ff7d45']}
+          mouseForce={24}
+          cursorSize={200}
+          isViscous
+          viscous={30}
+          iterationsViscous={32}
+          iterationsPoisson={32}
+          resolution={0.5}
+          isBounce={false}
+          autoDemo
+          autoSpeed={0.5}
+          autoIntensity={2.2}
+          takeoverDuration={0.25}
+          autoResumeDelay={3000}
+          autoRampDuration={0.6}
+
+        />
       </div>
 
-      <div className="relative z-10 max-w-4xl mx-auto">
+      <div className="relative z-10 max-w-4xl mx-auto px-4 pt-32 pb-24 md:pt-32 md:pb-32">
         {/* Badge */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -24,7 +44,7 @@ export const Hero = () => {
           transition={{ duration: 0.5 }}
           className="inline-flex items-center gap-2 px-4 py-2 mb-8 rounded-full border border-white/10 bg-white/5 backdrop-blur-sm text-sm text-muted-foreground"
         >
-          <Sparkles className="w-4 h-4 text-purple-400" />
+          <Sparkles className="w-4 h-4 text-orange-400" />
           <span>AI Development Studio & Product Lab</span>
         </motion.div>
 

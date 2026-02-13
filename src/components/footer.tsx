@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -51,12 +53,12 @@ export const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/#contact"
+                <button
+                  onClick={() => window.dispatchEvent(new CustomEvent('open-voice-widget'))}
                   className="text-muted-foreground hover:text-foreground text-sm transition-colors"
                 >
                   Contact
-                </Link>
+                </button>
               </li>
             </ul>
           </div>

@@ -16,12 +16,12 @@ export const CTAcard = () => {
         viewport={{ once: true }}
         className="max-w-3xl w-full overflow-hidden rounded-2xl relative container mx-auto text-center border border-white/10"
       >
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-blue-500/5 to-cyan-500/10" />
+        <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 via-amber-500/5 to-yellow-500/10" />
         <FlickeringGrid
           className="z-0 absolute inset-0 size-full"
           squareSize={4}
           gridGap={6}
-          color="#8B5CF6"
+          color="#F97316"
           maxOpacity={0.3}
           flickerChance={0.1}
           height={800}
@@ -39,15 +39,14 @@ export const CTAcard = () => {
             we&apos;re ready.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/#contact">
-              <Button
-                size="lg"
-                className="bg-white text-black hover:bg-white/90 px-8 font-semibold"
-              >
-                Start a Conversation
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </Button>
-            </Link>
+            <Button
+              size="lg"
+              className="bg-white text-black hover:bg-white/90 px-8 font-semibold"
+              onClick={() => window.dispatchEvent(new CustomEvent('open-voice-widget'))}
+            >
+              Start a Conversation
+              <ArrowRight className="w-4 h-4 ml-2" />
+            </Button>
             <Link
               href="https://calendar.app.google/sWGMdY5nu1Lia6aa9"
               target="_blank"

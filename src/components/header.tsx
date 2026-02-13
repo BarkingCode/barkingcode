@@ -23,11 +23,14 @@ export const Header = () => {
     setIsMenuOpen(!isMenuOpen)
   }
 
+  const openVoiceWidget = () => {
+    window.dispatchEvent(new CustomEvent('open-voice-widget'))
+  }
+
   const navLinks = [
     { href: '/#about', label: 'About' },
     { href: '/#work', label: 'Work' },
     { href: '/#products', label: 'Products' },
-    { href: '/#contact', label: 'Contact' },
   ]
 
   return (
@@ -65,14 +68,13 @@ export const Header = () => {
               </Link>
             </div>
           ))}
-          <Link href="/#contact">
-            <Button
-              size="sm"
-              className="bg-white text-black hover:bg-white/90 font-semibold"
-            >
-              Get in Touch
-            </Button>
-          </Link>
+          <Button
+            size="sm"
+            className="bg-white text-black hover:bg-white/90 font-semibold"
+            onClick={openVoiceWidget}
+          >
+            Get in Touch
+          </Button>
         </nav>
         <button className="md:hidden text-foreground" onClick={toggleMenu}>
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -93,13 +95,15 @@ export const Header = () => {
                 </Link>
               </div>
             ))}
-            <Link href="/#contact">
-              <button onClick={toggleMenu}>
-                <Button className="bg-white text-black hover:bg-white/90 font-semibold">
-                  Get in Touch
-                </Button>
-              </button>
-            </Link>
+            <Button
+              className="bg-white text-black hover:bg-white/90 font-semibold"
+              onClick={() => {
+                toggleMenu()
+                openVoiceWidget()
+              }}
+            >
+              Get in Touch
+            </Button>
           </nav>
         </div>
       )}
