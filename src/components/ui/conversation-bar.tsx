@@ -169,14 +169,23 @@ export const ConversationBar = React.forwardRef<
       }
     }, [agentState, handleEndSession, startConversation])
 
-    const handleSendText = React.useCallback(() => {
+    const pendingMessageRef = React.useRef<string | null>(null)
+
+    const handleSendText = React.useCallback(async () => {
       if (!textInput.trim()) return
 
       const messageToSend = textInput
-      conversation.sendUserMessage(messageToSend)
       setTextInput("")
-      onSendMessage?.(messageToSend)
-    }, [conversation, textInput, onSendMessage])
+
+      if (agentState === "disconnected") {
+        pendingMessageRef.current = messageToSend
+        setIsMuted(true)
+        await startConversation()
+      } else if (agentState === "connected") {
+        conversation.sendUserMessage(messageToSend)
+        onSendMessage?.(messageToSend)
+      }
+    }, [conversation, textInput, onSendMessage, agentState, startConversation])
 
     const isConnected = agentState === "connected"
 
@@ -201,6 +210,15 @@ export const ConversationBar = React.forwardRef<
       },
       [handleSendText]
     )
+
+    React.useEffect(() => {
+      if (isConnected && pendingMessageRef.current) {
+        const msg = pendingMessageRef.current
+        pendingMessageRef.current = null
+        conversation.sendUserMessage(msg)
+        onSendMessage?.(msg)
+      }
+    }, [isConnected, conversation, onSendMessage])
 
     React.useEffect(() => {
       return () => {
@@ -282,7 +300,6 @@ export const ConversationBar = React.forwardRef<
                     onClick={() => setKeyboardOpen((v) => !v)}
                     aria-pressed={keyboardOpen}
                     className="relative"
-                    disabled={!isConnected}
                   >
                     <Keyboard
                       style={{ transitionTimingFunction: "cubic-bezier(0.22,1,0.36,1)" }}
@@ -333,13 +350,12 @@ export const ConversationBar = React.forwardRef<
                   onKeyDown={handleKeyDown}
                   placeholder="Enter your message..."
                   className="min-h-[100px] resize-none border-0 bg-transparent pr-12 shadow-none focus-visible:ring-0"
-                  disabled={!isConnected}
                 />
                 <Button
                   size="icon"
                   variant="ghost"
                   onClick={handleSendText}
-                  disabled={!textInput.trim() || !isConnected}
+                  disabled={!textInput.trim() || agentState === "connecting"}
                   className="absolute right-3 bottom-3 h-8 w-8"
                 >
                   <ArrowUpIcon className="h-4 w-4" />
